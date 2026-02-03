@@ -1,6 +1,14 @@
 const express = require('express')
+const { app: page404 } = require('./middleware/page404.cjs') // page not found middleware function
 const app = express()
-const port = 3000
+const PORT = 3000
+const { usersRouter } = require('./routes/usersrouter.cjs') // users route import
+app.use(express.json())//* express json middleware
 
-app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.use('/users', usersRouter) // users route
+
+
+
+
+app.use(page404) // if page isn't found this runs
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
