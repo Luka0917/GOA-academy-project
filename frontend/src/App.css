@@ -1,0 +1,25 @@
+#main {
+    background: #EEEFF1;
+    background: linear-gradient(90deg, rgba(238, 239, 241, 1) 0%, rgba(249, 250, 251, 1) 100%);
+}
+.floating-icon {
+    font-size: 50px;
+    opacity: 0.2;
+    position: absolute;
+    animation: floating-effect 8s infinite;
+}
+
+@keyframes floating-effect {
+    0%{ transform: translateY(0) }
+    50%{ transform: translateY(25px) }
+    100%{ transform: translateY(0) }
+}
+
+.bg-glow {
+    width: 250px;
+    height: 250px;
+    background-color: #1d724a;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(200px);
+}
