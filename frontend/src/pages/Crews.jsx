@@ -4,7 +4,7 @@ export default function Crews(){
     return (
         <div>
             <NavBar />
-            Crews Page
+            Crews Page.
         </div>
     )
 }
